@@ -2,6 +2,9 @@
 
 Un juego para aprender la tabla periodica desarrollado desde cero
 
+## Link
+[Dados Quimicos](https://lamazorca.github.io/dados-quimicos/)
+
 ## Mejoras futuras
 
 * Poder realizar la diferenciación de turnos para los números de jugadores, es decir, que diferencia el turno del jugador 1 o el jugador 2 o el jugador 3, de esa forma igual poder determinar los puntos que gana o pierda cada uno y las preguntas erroneas que tenga
