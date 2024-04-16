@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Mazun Calvo">
+    <meta name="description" content="Juego de aprendizaje para la tabla periodica">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f924ee51c.js" crossorigin="anonymous"></script>
+    <link href="output.css" rel="stylesheet">
+    <title>Dados Químicos</title>
+</head>
+<body class="text-fern-frond-950 h-screen max-sm:h-auto max-md:h-auto">
+    <header class="bg-gradient-to-r from-fern-frond-500/95 via-fern-frond-300/95 to-fern-frond-200/95 w-ful sticky top-0">
+        <div class="size-20 mx-auto my-0">
+            <a href="index.html"><img class="w-full h-full transition-transform hover:scale-110" src="https://i.postimg.cc/WhDJYfXW/Logo-2-mazorca.png" alt="Logo de la mazorca"></a>
+        </div>
+    </header>
+    <main class="w-full px-10 text-fern-frond-950 bg-repeat-round bg-16 mt-4" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9),rgba(248, 249, 236, 0.9),rgba(255, 255, 255, 0.9)),url(https://imgs.search.brave.com/iZmfAY4BtsTle5BktzDmkZf5irt1BQbNiI2ZRg3KzhM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni80NDgvNDQ4MDU2/LnBuZw);">
+        <div>
+            <h1 class="text-center mb-4 font-bold text-4xl font-title">Los Dados Químicos</h1>
+            <p class="text-left font-sans">Un juego donde aprenderás de manera interactiva y divertida los elementos de la tabla periódica, el juego se basa en el azar de lanzar los dados por turno y responder preguntas, serán máximo de tres contrincantes contra la máquina.</p>
+        </div>
+        <div>
+            <h2 class="font-serif text-center mt-3 mb-3 font-semibold text-2xl">Instrucciones</h2>
+            <p class="font-sans">Los jugadores apostarán a dos de los once números, y los dados serán lanzados, si el número de los dados lanzados es igual a alguno de los números escogidos por el jugador, se le realizará una pregunta sobre los elementos químicos de la tabla periódica, en caso contrario su turno termina.</p>
+            <h3 class="font-serif text-center mt-3 mb-3 font-semibold text-xl">Sobre las variaciones</h3>
+            <p class="font-sans">A los jugadores se les permitirá poder apostar hasta a cuatros números diferentes, esto les permitirá aumentar la probabilidad de obtener el mismo número de los dados con los números apostados, pero mientras más se apueste, <strike class="opacity-75"> más difícil será la pregunta y</strike> aumentara la cantidad de preguntas.</p>
+            <p class="font-sans mt-1 mb-1">Si el jugador apuesta por un número, se le realizará una sola pregunta <strike class="opacity-75">de nivel fácil y </strike>obtendrá dos puntos si contesta bien, si contesta mal la máquina ganará dos puntos.</p>
+            <p class="font-sans mb-1">Si el jugador apuesta por dos números, se le realizará dos preguntas <strike class="opacity-75">de nivel intermedio y </strike>obtendrá dos puntos por cada pregunta contesta correctamente, pero la máquina obtendrá dos puntos por cada pregunta mal contestada.</p>
+            <p class="font-sans">Si el jugador apuesta por tres números, se le realizará tres preguntas <strike class="opacity-75">de nivel difícil y </strike>obtendrá dos puntos por cada respuesta contesta correctamente y la máquina tendrá 2 puntos por cada respuesta mal contestada.</p>
+            <h3 class="font-serif text-center mt-3 mb-3 font-semibold text-xl">Sobre cómo ganar o perder</h3>
+            <p class="font-sans">Los jugadores escogerán el límite de puntos a ganar, el juego termina cuando uno de los jugadores gane la cantidad de puntos establecidos o cuando la máquina gane el doble de los puntos establecidos, los puntos deberán ser igual o mayor a diez puntos.</p>
+            <p class="font-sans mt-1 mb-1">La máquina acumulara los puntos por cada repuesta mal contestada de cada uno de los jugadores, así que trata de no contestar mal.</p>
+            <p class="font-sans">El jugador que acumule cinco preguntas contestadas de manera errónea, será eliminado del juego.</p>
+        </div>
+        <div class="flex flex-col w-full">
+            <div><h2 class="font-serif text-center mt-3 font-semibold text-xl">Si estas listo, entonces podemos comenzar</h2></div>
+            <div class="mx-auto my-4 relative"><button class="border-fern-frond-600 border-2 border-double rounded-full  relative ring-2 ring-fern-frond-400 ring-offset-1 hover:transition-transform hover:scale-125  animate-pulse"><a href="juego.html" class="font-title font-bold text-xl px-10">Jugar</a></button></div>
+        </div> 
+    </main>
+    <footer class="bg-gradient-to-r from-fern-frond-200/95 via-fern-frond-300/95 to-fern-frond-500/95 mt-2 w-full py-4">
+        <div class="flex justify-between items-center w-full text-base max-sm:flex-col max-sm:text-center max-md:flex-col max-md:text-center">
+            <div class="pl-10 max-sm:px-10 max-md:px-10">
+                <p>Esta página web esta protegido por <span class="font-bold">&copy;Copyright 2024</span> del creador <span class="font-bold">La Mazorca</span></p>
+            </div>
+            <div class="pr-10 text-2xl max-sm:px-10 max-md:px-10 max-sm:mt-4 max-md:mt-4">
+                <ul class="grid grid-cols-3 grid-rows-1 grid-flow-row gap-4">
+                    <li class="col-start-1 col-end-1 transition-transform hover:scale-150 hover:text-fern-frond-100"><a href="https://www.linkedin.com/in/david-mazun-calvo/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="col-start-2 col-end-2 transition-transform hover:scale-150 hover:text-fern-frond-100"><a href="https://github.com/LaMazorca"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="col-start-3 col-end-3 transition-transform hover:scale-150 hover:text-fern-frond-100"><a href="https://www.freecodecamp.org/La_Mazorca"><i class="fa-brands fa-free-code-camp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

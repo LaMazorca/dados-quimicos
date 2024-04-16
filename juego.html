@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Mazun Calvo">
+    <meta name="description" content="Juego de aprendizaje para la tabla periodica">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f924ee51c.js" crossorigin="anonymous"></script>
+    <link href="output.css" rel="stylesheet">
+    <title>Dados Químicos</title>
+</head>
+<body class="text-fern-frond-950 h-screen max-sm:h-auto max-md:h-auto w-full">
+    <header class="z-50 bg-gradient-to-r from-fern-frond-500/95 via-fern-frond-300/95 to-fern-frond-200/95 w-ful sticky top-0">
+        <div class="size-20 mx-auto my-0">
+            <a href="index.html"><img class="w-full h-full transition-transform hover:scale-110" src="https://i.postimg.cc/WhDJYfXW/Logo-2-mazorca.png" alt="Logo de la mazorca"></a>
+        </div>
+    </header>
+    <main id="main" class="h-5/6 text-fern-frond-950 bg-repeat-round bg-16 mt-4 mx-10" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9),rgba(248, 249, 236, 0.9),rgba(255, 255, 255, 0.9)),url(https://imgs.search.brave.com/iZmfAY4BtsTle5BktzDmkZf5irt1BQbNiI2ZRg3KzhM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni80NDgvNDQ4MDU2/LnBuZw);">
+        <section id="options">
+            <div class="flex flex-col items-center">
+                <div class="w-full">
+                    <h1 class="text-6xl text-center font-title">Decide primero</h1>
+                </div>
+                <div class="my-4 flex flex-col items-center text-center">
+                    <form id="form">
+                        <div class="my-4">
+                            <fieldset class="text-2xl flex flex-col">Escoge el número de Jugadores 
+                                <label class="text-xl mt-2">
+                                    <input type="radio" id="players" name="players" value="1" class="radio accent-fern-frond-300" required> Un Jugador
+                                </label>
+                                <label  class="text-xl peer">
+                                    <input type="radio" id="players" name="players" value="2" class="radio accent-fern-frond-300" required disabled> Dos Jugadores
+                                </label>
+                                <label  class="text-xl peer">
+                                    <input type="radio" id="players" name="players" value="3" class="radio accent-fern-frond-300" required disabled> Tres Jugadores
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div>
+                            <fieldset class="text-2xl flex flex-col">Cantidad de puntos a ganar 
+                                <input type="number" name="points" id="points" min="10" required class="my-4 text-xl w-1/4 text-center mx-auto font-title drop-shadow-lg border rounded-md border-fern-frond-400 ring-2 ring-fern-frond-800 ring-offset-1">
+                            </fieldset>
+                        </div>
+                        <div class="flex justify-around my-4 max-sm:flex max-sm:flex-col max-md:flex max-md:flex-col max-sm:items-center max-md:items-center">
+                            <button type="submit" id="btn-start" class="border-fern-frond-600 border-2 border-double rounded-full ring-2 ring-fern-frond-400 ring-offset-1 hover:transition-transform hover:scale-125  animate-pulse p-4 shadow-2xl shadow-fern-frond-500/70 drop-shadow-md font-title max-sm:m-4">Comenzar</button>
+                            <button type="reset" id="btn-clear" class="border-fern-frond-600 border-2 border-double rounded-full ring-2 ring-fern-frond-400 ring-offset-1 hover:transition-transform hover:scale-125  animate-pulse p-4 shadow-2xl shadow-fern-frond-500/70 drop-shadow-md font-title">Resetear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="game" class="hidden">
+            <div><h1 class="font-title text-2xl text-fern-frond-950 text-center">Escoge tus apuestas</h1></div>
+            <div class="mt-8 grid grid-cols-6 justify-items-center gap-8 font-title" id="display-bet">
+                <div><span class="text-fern-frond-950 text-2xl hover:animate-pulse hover:text-fern-frond-400"><a href="juego.html"><i class="fa-solid fa-rotate-left"></i></a></span></div>
+                <div><button id="2" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">02</button></div>
+                <div><button id="3" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">03</button></div>
+                <div><button id="4" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">04</button></div>
+                <div><button id="5" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">05</bu></div>
+                <div><button id="6" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">06</button></div>
+                <div><button id="7" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">07</button></div>
+                <div><button id="8" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">08</button></div>
+                <div><button id="9" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">09</button></div>
+                <div><button id="10" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">10</button></div>
+                <div><button  id="11" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">11</button></div>
+                <div><button id="12" class="bg-fern-frond-700 p-2 rounded-full text-fern-frond-200 text-xl cursor-pointer bet">12</button></div>
+            </div>
+            <div id="display-game" class="w-full flex flex-col items-center my-4">
+                <div class="w-full m-auto" id="question"><img id="image" class="size-40 mx-auto my-0 drop-shadow-md" src="https://imgs.search.brave.com/sR2qVFRdMdPw3wlaUXeUWiZBTLK4Lr31DHAASPh0KvE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODk4NzcyOWNiYTk4/NDFlYWJhYjYxN2Iu/cG5n" alt="Imagén de unos daos"></div>
+                <button id="btn-launch" class="border-fern-frond-600 border-2 rounded-full ring-2 ring-fern-frond-400 ring-offset-1 hover:transition-transform hover:scale-125  p-2 shadow-2xl shadow-fern-frond-500/70 drop-shadow-md">Lanzar</button>
+            </div>
+            <div id="card-player" class="flex my-4 h-1/2">
+                <div id="first-player" class="text-fern-frond-800 flex flex-col items-center bg-gradient-to-b from-fern-frond-700 w-2/6 h-fit border-2 border-fern-frond-950 invisible"></div>
+                <div id="second-player" class="text-fern-frond-800 flex flex-col items-center bg-gradient-to-b from-fern-frond-700 w-2/6 h-fit border-2 border-fern-frond-950 mx-4 invisible"></div>
+                <div id="third-player" class="text-fern-frond-800 flex items-center flex-col bg-gradient-to-b from-fern-frond-700 w-2/6 h-fit border-2 border-fern-frond-950 invisible"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="z-50 bg-gradient-to-r from-fern-frond-200/95 via-fern-frond-300/95 to-fern-frond-500/95 w-full py-4 block">
+        <div class="flex justify-between items-center w-full text-base max-sm:flex-col max-sm:text-center max-md:flex-col max-md:text-center">
+            <div class="pl-10 max-sm:px-10 max-md:px-10">
+                <p>Esta página web esta protegido por <span class="font-bold">&copy;Copyright 2024</span> del creador <span class="font-bold">La Mazorca</span></p>
+            </div>
+            <div class="pr-10 text-2xl max-sm:px-10 max-md:px-10 max-sm:mt-4 max-md:mt-4">
+                <ul class="grid grid-cols-3 grid-rows-1 grid-flow-row gap-4">
+                    <li class="col-start-1 col-end-1 transition-transform hover:scale-150 hover:text-fern-frond-100"><a href="https://www.linkedin.com/in/david-mazun-calvo/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="col-start-2 col-end-2 transition-transform hover:scale-150 hover:text-fern-frond-100"><a href="https://github.com/LaMazorca"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="col-start-3 col-end-3 transition-transform hover:scale-150 hover:text-fern-frond-100"><a href="https://www.freecodecamp.org/La_Mazorca"><i class="fa-brands fa-free-code-camp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
